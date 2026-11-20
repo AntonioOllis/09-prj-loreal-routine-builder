@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,23 +20,79 @@
       <!------- Header / Branding ------->
       <header class="site-header">
         <img src="img/loreal-logo.png" alt="L'Oréal Logo" class="logo" />
-        <h1 class="site-title">Smart Routine &amp; Product Advisor</h1>
+        <label
+          for="languageSelect"
+          class="visually-hidden"
+          data-translation="languageLabel"
+        >
+          Language
+        </label>
+        <select
+          id="languageSelect"
+          class="language-select"
+          aria-label="Language"
+          data-translation-label="languageLabel"
+        >
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+        </select>
+        <h1 class="site-title" data-translation="title">
+          Smart Routine &amp; Product Advisor
+        </h1>
       </header>
 
       <!-- Category Filter -->
       <div class="search-section">
         <select id="categoryFilter">
-          <option value="" disabled selected>Choose a Category</option>
-          <option value="cleanser">Cleansers</option>
-          <option value="moisturizer">Moisturizers & Treatments</option>
-          <option value="haircare">Haircare</option>
-          <option value="makeup">Makeup</option>
-          <option value="hair color">Hair Color</option>
-          <option value="hair styling">Hair Styling</option>
-          <option value="men's grooming">Men's Grooming</option>
-          <option value="suncare">Suncare</option>
-          <option value="fragrance">Fragrance</option>
+          <option
+            value=""
+            disabled
+            selected
+            data-translation="categoryPlaceholder"
+          >
+            Choose a Category
+          </option>
+          <option value="cleanser" data-translation="categoryCleanser">
+            Cleansers
+          </option>
+          <option value="moisturizer" data-translation="categoryMoisturizer">
+            Moisturizers &amp; Treatments
+          </option>
+          <option value="haircare" data-translation="categoryHaircare">
+            Haircare
+          </option>
+          <option value="makeup" data-translation="categoryMakeup">
+            Makeup
+          </option>
+          <option value="hair color" data-translation="categoryHairColor">
+            Hair Color
+          </option>
+          <option value="hair styling" data-translation="categoryHairStyling">
+            Hair Styling
+          </option>
+          <option
+            value="men's grooming"
+            data-translation="categoryMensGrooming"
+          >
+            Men's Grooming
+          </option>
+          <option value="suncare" data-translation="categorySuncare">
+            Suncare
+          </option>
+          <option value="fragrance" data-translation="categoryFragrance">
+            Fragrance
+          </option>
         </select>
+        <input
+          id="productSearch"
+          type="search"
+          placeholder="Search products by name"
+          aria-label="Search products by name"
+          data-translation-placeholder="searchPlaceholder"
+          data-translation-label="searchPlaceholder"
+          dir="auto"
+          autocomplete="off"
+        />
       </div>
 
       <!-- Products Grid -->
@@ -44,43 +100,57 @@
 
       <!-- Selected Products -->
       <div class="selected-products">
-        <h2>Selected Products</h2>
+        <h2 data-translation="selectedProducts">Selected Products</h2>
         <div id="selectedProductsList"></div>
         <button id="generateRoutine" class="generate-btn">
-          <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span data-translation="generateRoutine">Generate Routine</span>
         </button>
       </div>
 
       <!------- Chat Area ------->
       <section class="chatbox">
-        <h2>Let's Build Your Routine</h2>
+        <h2 data-translation="chatTitle">Let's Build Your Routine</h2>
         <div id="chatWindow" class="chat-window"></div>
 
         <form id="chatForm" class="chat-form">
-          <label for="userInput" class="visually-hidden">Message</label>
+          <label
+            for="userInput"
+            class="visually-hidden"
+            data-translation="messageLabel"
+          >
+            Message
+          </label>
           <input
             id="userInput"
             name="userInput"
             type="text"
             placeholder="Ask me about products or routines…"
+            data-translation-placeholder="chatPlaceholder"
+            data-translation-label="messageLabel"
+            dir="auto"
             autocomplete="off"
             required
           />
           <button type="submit" id="sendBtn">
             <i class="fa-solid fa-paper-plane"></i>
-            <span class="visually-hidden">Send</span>
+            <span class="visually-hidden" data-translation="sendLabel"
+              >Send</span
+            >
           </button>
         </form>
       </section>
 
       <!------- Footer Links ------->
       <footer class="site-footer">
-        <p>&copy; 2025 L'Oréal. All rights reserved.</p>
+        <p data-translation="copyright">
+          &copy; 2025 L'Oréal. All rights reserved.
+        </p>
         <nav>
           <!-- These URLs are placeholders -->
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Use</a>
-          <a href="#">Contact</a>
+          <a href="#" data-translation="privacy">Privacy Policy</a>
+          <a href="#" data-translation="terms">Terms of Use</a>
+          <a href="#" data-translation="contact">Contact</a>
         </nav>
       </footer>
     </div>
